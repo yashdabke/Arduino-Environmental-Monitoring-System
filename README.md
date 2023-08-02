@@ -1,4 +1,4 @@
-# Temperature-Humidity-and-Light-Sensing-using-Arduino-IDE
+Temperature, Humidity and Light Sensing using FreeRTOS and Arduino IDE
 
 In this Arduino sketch we use FreeRTOS to create 3 tasks to run independently
 
