@@ -70,15 +70,15 @@ void loop()
 /*----------------------- Tasks -----------------------*/
 /*-----------------------------------------------------*/
 
-void TaskHum(void*pvParameters)  // This is a task.
+void TaskHum(void* pvParameters)  // This is a task.
 {
-  (void) pvParameters;
+  (void)pvParameters;
 
-  pinMode(dht_apin,INPUT);
+  pinMode(dht_apin, INPUT);
 
   for  (;;)
   {
-    float hum=dht.readHumidity();
+    float hum = dht.readHumidity();
     Serial.print("current humidity = ");
     Serial.print(hum);
     Serial.print("%\t");
@@ -87,16 +87,16 @@ void TaskHum(void*pvParameters)  // This is a task.
 }
 
 
-void TaskTem(void*pvParameters)  // This is a task.
+void TaskTem(void* pvParameters)  // This is a task.
 {
-  (void) pvParameters;
+  (void)pvParameters;
 
   //initialize digital LED_BUILTIN on pin 13 as an output.
-  pinMode(dht_apin,INPUT);
+  pinMode(dht_apin, INPUT);
 
   for  (;;)  // A Task shall never return or exit.
   {
-    float hum=dht.readTemperature();
+    float tem = dht.readTemperature();
     Serial.print("Temperature = ");
     Serial.print(tem);
     Serial.print("C\n");
@@ -107,9 +107,9 @@ void TaskTem(void*pvParameters)  // This is a task.
 }
 
 
-void TaskLight(void*pvParameters)  // This is a task.
+void TaskLight(void* pvParameters)  // This is a task.
 {
-  pinMode(dht_a5pin,INPUT);
+  pinMode(dht_a5pin, INPUT);
 
   for  (;;)
   {
